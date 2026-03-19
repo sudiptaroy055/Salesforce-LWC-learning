@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="🎓 Student Manager">
+        <div class="slds-var-m-around_medium">
+
+            <!-- Two-way binding inputs -->
+            <lightning-input
+                type="text"
+                label="First Name"
+                onkeyup={handleFirstName}>
+            </lightning-input>
+
+            <lightning-input
+                type="text"
+                label="Last Name"
+                onkeyup={handleLastName}>
+            </lightning-input>
+
+            <lightning-input
+                type="number"
+                label="Marks"
+                onkeyup={handleMarks}>
+            </lightning-input>
+
+            <!-- Getter output -->
+            <p>Full Name: <strong>{fullName}</strong></p>
+            <p>Grade: <strong>{grade}</strong></p>
+
+            <lightning-button
+                label="Add Student"
+                onclick={addStudent}>
+            </lightning-button>
+
+            <hr/>
+
+            <!-- Render passed students only using getter -->
+            <h3>✅ Passed Students</h3>
+            <template for:each={passedStudents} for:item="student">
+                <div key={student.id} class="slds-box slds-var-m-bottom_small">
+                    <p>Name: {student.fullName}</p>
+                    <p>Marks: {student.marks}</p>
+                    <p>Grade: {student.grade}</p>
+                </div>
+            </template>
+
+            <!-- Render failed students only using getter -->
+            <h3>❌ Failed Students</h3>
+            <template for:each={failedStudents} for:item="student">
+                <div key={student.id} class="slds-box slds-var-m-bottom_small">
+                    <p>Name: {student.fullName}</p>
+                    <p>Marks: {student.marks}</p>
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
