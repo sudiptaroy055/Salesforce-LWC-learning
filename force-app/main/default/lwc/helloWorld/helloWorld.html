@@ -1,0 +1,28 @@
+<template>
+    <!-- <input type="text" onkeyup= {changeHandler}/>
+    <div> {greeting}, {fullname} how are you? </div>
+    <div>hi</div> -->
+    
+
+    <lightning-card  title="Two way data biending">
+            <div  class="slds-var-m-*_medium">
+            <lightning-input type="text"
+              label="Enter gretings"
+              onkeyup= {changeHandler}>
+        </lightning-input>
+            <div> {greeting}, {fullname} how are you? </div>  
+            </div>      
+    </lightning-card>
+        
+
+    <lightning-card  title="@track properties">
+            <div  class="slds-var-m-*_medium">
+            <lightning-input type="text"
+              label="Enter city name"
+              onkeyup= {trackHandler}>
+        </lightning-input>
+            <div> {address.city} is my current city. </div>  
+            </div>      
+    </lightning-card>
+
+</template>
