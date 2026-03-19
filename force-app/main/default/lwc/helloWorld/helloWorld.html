@@ -3,8 +3,8 @@
     <div> {greeting}, {fullname} how are you? </div>
     <div>hi</div> -->
     
-
-    <lightning-card  title="Two way data biending">
+    <!-- Data Binding -->
+    <lightning-card  title="Two way data binding">
             <div  class="slds-var-m-*_medium">
             <lightning-input type="text"
               label="Enter gretings"
@@ -14,7 +14,7 @@
             </div>      
     </lightning-card>
         
-
+    <!-- @track binding -->
     <lightning-card  title="@track properties">
             <div  class="slds-var-m-*_medium">
             <lightning-input type="text"
@@ -24,5 +24,14 @@
             <div> {address.city} is my current city. </div>  
             </div>      
     </lightning-card>
+
+    <!-- getter example -->
+    <lightning-card  title="Getter example">
+            <div  class="slds-var-m-*_medium">
+            <div> {firstUser} is my first user. </div>
+            <div> {sum} is the sum of {num1} and {num2}. </div>
+            </div>      
+    </lightning-card>
+    
 
 </template>
